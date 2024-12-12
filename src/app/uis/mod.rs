@@ -112,7 +112,7 @@ pub fn table_ui(ui: &mut egui::Ui, reset: bool, app: &App) {
     let mut table = TableBuilder::new(ui)
         .striped(true)
         .resizable(false)
-        .cell_layout(egui::Layout::left_to_right(egui::Align::Center).with_main_wrap(true))
+        .cell_layout(egui::Layout::left_to_right(egui::Align::Center))
         .column(Column::auto()) // Idx
         .column(
             Column::remainder() // Timestamp
