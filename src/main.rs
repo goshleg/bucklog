@@ -1,3 +1,5 @@
+#![cfg_attr(not(debug_assertions), windows_subsystem = "windows")]
+
 use bucklog::app;
 use bucklog::app::config;
 use egui::{Vec2, ViewportBuilder};
