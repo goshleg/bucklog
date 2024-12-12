@@ -1,0 +1,37 @@
+[package]
+name = "bucklog"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+egui = "0.29.1"
+egui_extras = { version = "0.29.1", features = ["svg"] }
+egui-theme-switch = "0.2.1"
+egui-notify = "0.17.0"
+eframe = "0.29.1"
+lapin = "2.5.0"
+crossbeam = "0.8.4"
+tokio = { version = "1.42.0", features = [
+    "sync",
+    "macros",
+    "rt-multi-thread",
+]}
+futures = "0.3.31"
+config = "0.14.1"
+dirs = "5.0.1"
+anyhow = "1.0.94"
+serde = { version = "1.0.215", features = ["derive"] }
+serde_yaml = "0.9.34"
+serde_json = "1.0.133"
+time = { version = "0.3.37", features = ["local-offset", "macros", "parsing", "serde"] }
+humantime = "2.1.0"
+
+[profile.dev.package."*"]
+opt-level = 3
+debug = false
+incremental = true
+
+[profile.dev]
+opt-level = 0
+debug = false
+incremental = true
